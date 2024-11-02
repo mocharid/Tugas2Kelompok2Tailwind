@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-blue-50 font-sans leading-normal tracking-normal">
+  
+  <header class="bg-gradient-to-b to-blue-500 from-blue-900 dark:to-gray-900 dark:from-gray-800 text-white shadow-lg py-4 px-8">
+    <div class="flex justify-between items-center">
+      <h1 class="text-3xl font-bold">Dashboard</h1>
+      <div class="flex items-center space-x-4">        
+        <button class="bg-blue-700 hover:bg-blue-600 text-white px-4 py-2 rounded">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="flex min-h-screen">
+    
+    <aside class="w-1/5 bg-gradient-to-b from-blue-500 to-blue-900 dark:from-gray-800 dark:to-gray-900 text-white p-6">
+      <nav>
+        <h2 class="text-xl font-semibold mb-8">Navigation</h2>
+        <ul>
+          <li class="mb-6">
+            <a href="#dashboard" class="flex items-center space-x-2 py-3 px-4 rounded-lg bg-blue-700 hover:bg-blue-600">
+              <span class="material-icons">dashboard</span>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="mb-6">
+            <a href="#users" class="flex items-center space-x-2 py-3 px-4 rounded-lg hover:bg-blue-600">
+              <span class="material-icons">people</span>
+              <span>Users</span>
+            </a>
+          </li>
+          <li class="mb-6">
+            <a href="#settings" class="flex items-center space-x-2 py-3 px-4 rounded-lg hover:bg-blue-600">
+              <span class="material-icons">settings</span>
+              <span>Settings</span>
+            </a>
+          </li>
+          <li>
+            <a href="#reports" class="flex items-center space-x-2 py-3 px-4 rounded-lg hover:bg-blue-600">
+              <span class="material-icons">bar_chart</span>
+              <span>Reports</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="w-4/5 p-10">
+      <div class="main-content p-6 bg-gray-100">
+          <div class="profile bg-white shadow-lg rounded-lg mb-6 p-6">
+              <h2 class="text-4xl font-bold text-blue-700 mb-4">KELOMPOK 2</span></h2>
+              <section class="about-us mb-6">
+                  <p class="text-gray-600">Selamat datang di kelompok 2 Kami beranggotakan 4 orang, 1 ketua dan 3 anggota.
+                    yang bertanggung jawab dibagian login page adalah Zaini attakillah
+                    yang bertanggung jawab dibagian register page adalah Farid
+                    yang bertanggung jawab dibagian admin page adalah Rizkhy akbar  
+                    disini yang bertanggung jawab dibagian Web Profile Adalah Tubagus Rusli Sumirat dan Farid Indrawan                                                                  
+                  </p>
+              </section>
+              
+              <section class="leader-members text-center">
+                <h3 class="text-2xl font-semibold text-blue-600">KETUA KELOMPOK</h3>
+                <ul class="space-y-3 flex flex-col items-center">
+                    <li class="flex flex-col items-center">                                          
+                      <img src="/Tugas2Kelompok2Tailwind/src/assets/image/rizkhy.jpeg" alt="Rizkhy Akbar" class="w-24 h-24 rounded-full mb-2">
+                        <strong class="text-gray-800">RIZKHY AKBAR</strong>
+                        <span class="text-gray-600">NPM : 5520122000</span>
+                    </li>
+                </ul>
+              </section>
+            
+              <h3 class="text-2xl font-semibold text-blue-600 mb-4 text-center">ANGGOTA</h3>
+              <ul class="flex flex-row justify-center gap-4">
+                <li class="flex flex-col items-center">                          
+                  <div class="flex flex-col items-center">
+                    <img src="/Tugas2Kelompok2Tailwind/src/assets/image/tubagus.jpg" alt="Tubagus" class="w-20 h-20 rounded-full mb-2">
+                    <strong class="text-gray-800">TUBAGUS RUSLI SUMIRAT</strong> 
+                    <span class="text-gray-600">NPM : 5520122012</span>
+                  </div>
+                </li>                                        
+                <li class="flex flex-col items-center">
+                  <div class="flex flex-col items-center">
+                    <img src="/Tugas2Kelompok2Tailwind/src/assets/image/zaini.jpeg" alt="Zaini" class="w-20 h-20 rounded-full mb-2">
+                    <strong class="text-gray-800">ZAINI ATHARIK PUTRA W</strong> 
+                    <span class="text-gray-600">NPM : 5520122000</span>
+                  </div>                                             
+                </li>                                    
+                <li class="flex flex-col items-center">
+                  <div class="flex flex-col items-center">
+                    <img src="/Tugas2Kelompok2Tailwind/src/assets/image/farid.jpeg" alt="Farid" class="w-20 h-20 rounded-full mb-2">
+                    <strong class="text-gray-800">M. FARID INDRAWAN</strong> 
+                    <span class="text-gray-600">NPM : 5520122000</span>
+                  </div>                          
+                </li>                        
+              </ul>              
+          </div>
+         
+          <div class="manage-data bg-white shadow-lg rounded-lg p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Manage Data & Permissions</h3>
+            <div class="space-y-4">
+                <button class="w-1/4 bg-blue-500 text-white font-semibold py-2 rounded hover:bg-blue-600">
+                    Manage Members
+                </button>
+                <button class="w-1/4 bg-blue-500 text-white font-semibold py-2 rounded hover:bg-blue-600">
+                    Manage Permissions
+                </button>
+            </div>
+        </div>
+          
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</body>
+</html>
