@@ -1,18 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web Profile</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      color-scheme: light dark;
+    }
+
+    /* Dark Mode Styles */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #1a202c;
+        color: white; /* Change text color to white in dark mode */
+      }
+      .bg-gray-100 { background-color: #2d3748; }
+      .bg-white { background-color: #2d3748; }
+      .text-gray-600 { color: #cbd5e0; }
+      .text-gray-700 { color: #a0aec0; }
+      .bg-blue-600 { background-color: #2b6cb0; }
+      .bg-blue-800 { background-color: #2c5282; }
+      .bg-blue-500 { background-color: #4299e1; }
+      .hover\:bg-blue-500:hover { background-color: #3182ce; }
+      .hover\:bg-blue-700:hover { background-color: #2b6cb0; }
+      .bg-yellow-500 { background-color: #d69e2e; }
+      .bg-red-500 { background-color: #c53030; }
+      .bg-gray-100 { background-color: #4a5568; }
+      .text-blue-600 { color: #63b3ed; }
+      .bg-gradient-to-b.from-blue-800.to-blue-600 { background-image: linear-gradient(to bottom, #2c5282, #2b6cb0); }
+      .bg-gradient-to-r.from-blue-700.to-teal-500 { background-image: linear-gradient(to right, #2c5282, #38b2ac); }
+      .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+      .text-blue-800 { color: #63b3ed; }
+    }
+
+    /* Light Mode Styles */
+    @media (prefers-color-scheme: light) {
+      body {
+        background-color: white; /* Change background to white in light mode */
+        color: black; /* Change text color to black in light mode */
+      }
+      .text-gray-600 { color: #4A5568; } /* Darker gray for light mode */
+      .text-gray-700 { color: #2D3748; } /* Darker gray for light mode */
+    }
+  </style>
+  <script>
+    // Script untuk mendeteksi tema sistem dan menambahkan kelas 'dark' ke elemen html
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
 </head>
-<body class="bg-blue-50 font-sans leading-normal tracking-normal">
+<body class="bg-blue-50 dark:bg-gray-900 font-sans leading-normal tracking-normal">
   
-  <header class="bg-gradient-to-b to-blue-500 from-blue-900 dark:to-gray-900 dark:from-gray-800 text-white shadow-lg py-4 px-8">
+  <header class="bg-gradient-to-b from-blue-900 to-blue-500 dark:from-gray-800 dark:to-gray-900 text-white shadow-lg py-4 px-8">
     <div class="flex justify-between items-center">
       <h1 class="text-3xl font-bold">Dashboard</h1>
       <div class="flex items-center space-x-4">        
-        <button class="bg-blue-700 hover:bg-blue-600 text-white px-4 py-2 rounded">Logout</button>
+        <button class="bg-blue-700 dark:bg-gray-700 hover:bg-blue-600 dark:hover:bg-gray-600 text-white px-4 py-2 rounded">Logout</button>
       </div>
     </div>
   </header>
@@ -24,25 +70,25 @@
         <h2 class="text-xl font-semibold mb-8">Navigation</h2>
         <ul>
           <li class="mb-6">
-            <a href="#dashboard" class="flex items-center space-x-2 py-3 px-4 rounded-lg bg-blue-700 hover:bg-blue-600">
+            <a href="#dashboard" class="flex items-center space-x-2 py-3 px-4 rounded-lg bg-blue-700 hover:bg-blue-600 dark:bg-gray-700 dark:hover:bg-gray-600">
               <span class="material-icons">dashboard</span>
               <span>Dashboard</span>
             </a>
           </li>
           <li class="mb-6">
-            <a href="#users" class="flex items-center space-x-2 py-3 px-4 rounded-lg hover:bg-blue-600">
+            <a href="#users" class="flex items-center space-x-2 py-3 px-4 rounded-lg hover:bg-blue-600 dark:hover:bg-gray-600">
               <span class="material-icons">people</span>
               <span>Users</span>
             </a>
           </li>
           <li class="mb-6">
-            <a href="#settings" class="flex items-center space-x-2 py-3 px-4 rounded-lg hover:bg-blue-600">
+            <a href="#settings" class="flex items-center space-x-2 py-3 px-4 rounded-lg hover:bg-blue-600 dark:hover:bg-gray-600">
               <span class="material-icons">settings</span>
               <span>Settings</span>
             </a>
           </li>
           <li>
-            <a href="#reports" class="flex items-center space-x-2 py-3 px-4 rounded-lg hover:bg-blue-600">
+            <a href="#reports" class="flex items-center space-x-2 py-3 px-4 rounded-lg hover:bg-blue-600 dark:hover:bg-gray-600">
               <span class="material-icons">bar_chart</span>
               <span>Reports</span>
             </a>
@@ -52,11 +98,11 @@
     </aside>
 
     <main class="w-4/5 p-10">
-      <div class="main-content p-6 bg-gray-100">
-          <div class="profile bg-white shadow-lg rounded-lg mb-6 p-6">
-              <h2 class="text-4xl font-bold text-blue-700 mb-4">KELOMPOK 2</span></h2>
+      <div class="main-content p-6 bg-gray-100 dark:bg-gray-800">
+          <div class="profile bg-white dark:bg-gray-700 shadow-lg rounded-lg mb-6 p-6">
+              <h2 class="text-4xl font-bold text-blue-700 dark:text-gray-200 mb-4">KELOMPOK 2</h2>
               <section class="about-us mb-6">
-                  <p class="text-gray-600">Selamat datang di kelompok 2 Kami beranggotakan 4 orang, 1 ketua dan 3 anggota.
+                  <p class="text-gray-600 dark:text-gray-300">Selamat datang di kelompok 2 Kami beranggotakan 4 orang, 1 ketua dan 3 anggota.
                     yang bertanggung jawab dibagian login page adalah Zaini attakillah
                     yang bertanggung jawab dibagian register page adalah Farid
                     yang bertanggung jawab dibagian admin page adalah Rizkhy akbar  
@@ -65,54 +111,57 @@
               </section>
               
               <section class="leader-members text-center">
-                <h3 class="text-2xl font-semibold text-blue-600">KETUA KELOMPOK</h3>
+                <h3 class="text-2xl font-semibold text-blue-600 dark:text-gray-300">KETUA KELOMPOK</h3>
                 <ul class="space-y-3 flex flex-col items-center">
                     <li class="flex flex-col items-center">                                          
                       <img src="/Tugas2Kelompok2Tailwind/src/assets/image/rizkhy.jpeg" alt="Rizkhy Akbar" class="w-24 h-24 rounded-full mb-2">
-                        <strong class="text-gray-800">RIZKHY AKBAR</strong>
-                        <span class="text-gray-600">NPM : 5520122000</span>
+                        <strong class="text-gray-800 dark:text-gray-200">RIZKHY AKBAR</strong>
+                        <span class="text-gray-600 dark:text-gray-400">NPM : 5520122000</span>
                     </li>
                 </ul>
               </section>
             
-              <h3 class="text-2xl font-semibold text-blue-600 mb-4 text-center">ANGGOTA</h3>
+              <h3 class="text-2xl font-semibold text-blue-600 dark:text-gray-300 mb-4 text-center">ANGGOTA</h3>
               <ul class="flex flex-row justify-center gap-4">
                 <li class="flex flex-col items-center">                          
                   <div class="flex flex-col items-center">
                     <img src="/Tugas2Kelompok2Tailwind/src/assets/image/tubagus.jpg" alt="Tubagus" class="w-20 h-20 rounded-full mb-2">
-                    <strong class="text-gray-800">TUBAGUS RUSLI SUMIRAT</strong> 
-                    <span class="text-gray-600">NPM : 5520122012</span>
+                    <strong class="text-gray-800 dark:text-gray-200">TUBAGUS RUSLI SUMIRAT</strong> 
+                    <span class="text-gray-600 dark:text-gray-400">NPM : 5520122012</span>
                   </div>
                 </li>                                        
                 <li class="flex flex-col items-center">
                   <div class="flex flex-col items-center">
                     <img src="/Tugas2Kelompok2Tailwind/src/assets/image/zaini.jpeg" alt="Zaini" class="w-20 h-20 rounded-full mb-2">
-                    <strong class="text-gray-800">ZAINI ATHARIK PUTRA W</strong> 
-                    <span class="text-gray-600">NPM : 5520122000</span>
+                    <strong class="text-gray-800 dark:text-gray-200">ZAINI ATHARIK PUTRA W</strong> 
+                    <span class="text-gray-600 dark:text-gray-400">NPM : 5520122000</span>
                   </div>                                             
                 </li>                                    
                 <li class="flex flex-col items-center">
                   <div class="flex flex-col items-center">
                     <img src="/Tugas2Kelompok2Tailwind/src/assets/image/farid.jpeg" alt="Farid" class="w-20 h-20 rounded-full mb-2">
-                    <strong class="text-gray-800">M. FARID INDRAWAN</strong> 
-                    <span class="text-gray-600">NPM : 5520122000</span>
+                    <strong class="text-gray-800 dark:text-gray-200">M. FARID INDRAWAN</strong> 
+                    <span class="text-gray-600 dark:text-gray-400">NPM : 5520122000</span>
                   </div>                          
                 </li>                        
               </ul>              
           </div>
          
-          <div class="manage-data bg-white shadow-lg rounded-lg p-6">
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">Manage Data & Permissions</h3>
+          <div class="manage-data bg-white dark:bg-gray-700 shadow-lg rounded-lg p-6">
+            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4">Manage Data & Permissions</h3>
             <div class="space-y-4">
-                <button class="w-1/4 bg-blue-500 text-white font-semibold py-2 rounded hover:bg-blue-600">
+                <button class="w-1/4 bg-blue-500 dark:bg-gray-600 text-white font-semibold py-2 rounded hover:bg-blue-600 dark:hover:bg-gray-500">
                     Manage Members
                 </button>
-                <button class="w-1/4 bg-blue-500 text-white font-semibold py-2 rounded hover:bg-blue-600">
+                <button class="w-1/4 bg-blue-500 dark:bg-gray-600 text-white font-semibold py-2 rounded hover:bg-blue-600 dark:hover:bg-gray-500">
                     Manage Permissions
                 </button>
             </div>
         </div>
           
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </main>
+  </div>
 </body>
 </html>
+
